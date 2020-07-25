@@ -1,0 +1,57 @@
+{
+	"model_name":"reporte",
+	"soft_deletes":"yes",
+	"pk":"id",
+	"localize":"yes",
+	"table":"reportes",
+    "fields": [		
+        {
+            "name": "fecha",
+            "type": "date"
+        },
+        {
+            "name": "descripcion",
+            "type": "string"
+        },
+        {
+            "name": "solicitante_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "area_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "solicitante",
+            "type": "belongsTo",
+            "class": "App\\Solicitante"
+        },
+        {
+            "name": "area",
+            "type": "belongsTo",
+            "class": "App\\Area"
+        },
+        {
+            "name": "trabajo",
+            "type": "hasOne",
+            "class": "App\\Trabajo"
+        }
+
+    ],
+    "foreign_keys": [
+        {
+            "column": "solicitante_id",
+            "references": "id",
+            "on": "solicitantes",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "area_id",
+            "references": "id",
+            "on": "areas",
+            "onDelete": "cascade"
+        }
+    ]
+}

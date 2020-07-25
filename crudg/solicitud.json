@@ -1,0 +1,52 @@
+{
+	"model_name":"solicitud",
+	"soft_deletes":"yes",
+	"pk":"id",
+	"localize":"yes",
+	"table":"solicituds",
+    "fields": [		
+        {
+            "name": "fecha",
+            "type": "date"
+        },
+        {
+            "name": "descripcion",
+            "type": "string"
+        },
+        {
+            "name": "trabajador_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "area_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "trabajador",
+            "type": "belongsTo",
+            "class": "App\\Trabajador"
+        },
+        {
+            "name": "area",
+            "type": "belongsTo",
+            "class": "App\\Area"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "trabajador_id",
+            "references": "id",
+            "on": "trabajadors",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "area_id",
+            "references": "id",
+            "on": "areas",
+            "onDelete": "cascade"
+        }
+    ]
+	
+}

@@ -1,0 +1,21 @@
+{
+	"model_name":"solicitante",
+	"soft_deletes":"yes",
+	"pk":"id",
+	"localize":"yes",
+	"table":"solicitantes",
+    "fields": [		
+        {
+            "name": "nombre",
+            "type": "string"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "reporte",
+            "type": "hasMany",
+            "class": "App\\Reporte"
+        }
+    ]
+	
+}

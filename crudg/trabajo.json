@@ -1,0 +1,38 @@
+{
+	"model_name":"trabajo",
+	"soft_deletes":"yes",
+	"pk":"id",
+	"localize":"yes",
+	"table":"trabajos",
+    "fields": [		
+        {
+            "name": "descripcion",
+            "type": "string"
+        },
+        {
+            "name": "reporte_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "reporte",
+            "type": "belongsTo",
+            "class": "App\\Reporte"
+        },
+        {
+            "name": "asignacion",
+            "type": "hasOne",
+            "class": "App\\Asignacion"
+        }
+    ]
+    ,
+    "foreign_keys": [
+        {
+            "column": "reporte_id",
+            "references": "id",
+            "on": "reportes",
+            "onDelete": "cascade"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+	"model_name":"area",
+	"soft_deletes":"yes",
+	"pk":"id",
+	"localize":"yes",
+	"table":"areas",
+    "fields": [		
+        {
+            "name": "nombreArea",
+            "type": "string"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "solicitud",
+            "type": "hasMany",
+            "class": "App\\Solicitud"
+        },
+        {
+            "name": "trabajador",
+            "type": "hasMany",
+            "class": "App\\Trabajador"
+        },
+        {
+            "name": "reporte",
+            "type": "hasMany",
+            "class": "App\\Reporte"
+        }
+
+    ]
+	
+}

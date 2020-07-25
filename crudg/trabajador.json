@@ -1,0 +1,58 @@
+{
+	"model_name":"trabajador",
+	"soft_deletes":"yes",
+	"pk":"id",
+	"localize":"yes",
+	"table":"trabajadors",
+    "fields": [		
+        {
+            "name": "nombre",
+            "type": "string"
+        },
+        {
+            "name": "apellido",
+            "type": "string"
+        },
+        {
+            "name": "area_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "usuario_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    
+    "relationships": [
+        {
+            "name": "area",
+            "type": "belongsTo",
+            "class": "App\\Area"
+        },
+        {
+            "name": "usuario",
+            "type": "belongsTo",
+            "class": "App\\Usuario"
+        },
+        {
+            "name": "solicitud",
+            "type": "hasMany",
+            "class": "App\\Solicitud"
+        }
+    ]
+    ,
+    "foreign_keys": [
+        {
+            "column": "area_id",
+            "references": "id",
+            "on": "areas",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "usuario_id",
+            "references": "id",
+            "on": "usuarios",
+            "onDelete": "cascade"
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+	"model_name":"asignacion",
+	"soft_deletes":"yes",
+	"pk":"id",
+	"localize":"yes",
+	"table":"asignacions",
+    "fields": [		
+        {
+            "name": "fechaInicio",
+            "type": "date"
+        },
+        {
+            "name": "hora",
+            "type": "time"
+        },
+        {
+            "name": "fechaFin",
+            "type": "date"
+        },
+        {
+            "name": "trabajo_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "administrador_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "trabajo",
+            "type": "belongsTo",
+            "class": "App\\Trabajo"
+        },
+        {
+            "name": "administrador",
+            "type": "belongsTo",
+            "class": "App\\Administrador"
+        }
+    ],
+    
+    "foreign_keys": [
+        {
+            "column": "trabajo_id",
+            "references": "id",
+            "on": "trabajos",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "administrador_id",
+            "references": "id",
+            "on": "administradors",
+            "onDelete": "cascade"
+        }
+    ]
+    	
+}

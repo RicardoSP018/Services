@@ -1,0 +1,41 @@
+{
+	"model_name":"administrador",
+	"soft_deletes":"yes",
+	"pk":"id",
+	"localize":"yes",
+	"table":"administradors",
+    "fields": [		
+        {
+            "name": "nombre",
+            "type": "string"
+        },
+        {
+            "name": "apellido",
+            "type": "string"
+        },
+        {
+            "name": "usuario_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "usuario",
+            "type": "belongsTo",
+            "class": "App\\Usuario"
+        },
+        {
+            "name": "asignacion",
+            "type": "hasMany",
+            "class": "App\\Asignacion"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "usuario_id",
+            "references": "id",
+            "on": "usuarios",
+            "onDelete": "cascade"
+        }
+    ]
+}

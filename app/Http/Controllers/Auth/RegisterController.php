@@ -34,7 +34,11 @@ class RegisterController extends Controller
      *
      * @var string
      */
+<<<<<<< HEAD
     protected $redirectTo = '/';
+=======
+    protected $redirectTo = '/home';
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
 
     /**
      * Create a new controller instance.
@@ -60,7 +64,11 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
+<<<<<<< HEAD
         'name' => ['required', 'string', 'max:255'],
+=======
+            'name' => ['required', 'string', 'max:255'],
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
         ]);
@@ -74,7 +82,16 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+<<<<<<< HEAD
 
+=======
+        $request = app('request');
+        if ($request->hasFile('imagen')) {
+            $file = $request->imagen('imagen');
+            $filename = time() . '.' . $file->getClientOriginalName();
+           Image::make($file)->resize(300, 300)->save(public_path('/imagenes' . $filename) );
+        }
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
 
         $user = User::create([
             'name' => $data['name'],
@@ -82,6 +99,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
         
+<<<<<<< HEAD
         if(request()->hasFile('imagen')){
             $imagen = $request()->file('imagen')->getClientOriginalName();
             $request()->file('imagen')->storeAs('imagen', $user->id . '/' .$imagen, '');
@@ -94,6 +112,16 @@ class RegisterController extends Controller
 
         return $user;
         }
+=======
+
+            
+
+        $user->asignar(1);
+        $user->asignarArea(3);
+
+        return $user;
+    }
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
 
 
     protected function registered(Request $request, $user)

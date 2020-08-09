@@ -48,7 +48,11 @@
                         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
                     </li>
                 </ul>
+<<<<<<< HEAD
             @can('Administrador' && 'Trabajdor')
+=======
+            @can('administrador' && 'trabajdor')
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
                 <!-- SEARCH FORM -->
 
 
@@ -164,8 +168,13 @@
                                     <div class="image">
                                         <img src="{{asset('imagenes/'. Auth::user()->imagen)}}" class="img-circle elevation-2" alt="User Image">
                                     </div>
+<<<<<<< HEAD
 
                                     <a href="{{route('usuarios.show', auth()->user()->id)}}">{{Auth::user()->name}}</a>
+=======
+                                {{ Auth::user()->name }}
+
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                     style="display: none;">
@@ -182,18 +191,27 @@
                         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                             data-accordion="false">
 
+<<<<<<< HEAD
 
                             @can('Administrador')
+=======
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
                             <li class="nav-item">
                                 <a href="/" class="{{ Request::path() === '/' ? 'nav-link active' : 'nav-link' }}">
                                     <i class="nav-icon fas fa-home"></i>
                                     <p>Inicio</p>
                                 </a>
                             </li>
+<<<<<<< HEAD
                             @endcan
 
 
                             @can('Administrador')
+=======
+
+
+                            @can('administrador')
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
                                 <li class="nav-item has-treeview">
                                     <a href="#" class="nav-link">
                                         <i class="nav-icon fas fa-user-edit"></i>
@@ -237,7 +255,11 @@
                             @endcan
 
 
+<<<<<<< HEAD
                             @can('Administrador')
+=======
+                            @can('administrador')
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
                                  <li class="nav-item">
                                      <a href="{{url('reportes')}}"
                                         class="{{ Request::path() === 'reportes' ? 'nav-link active' : 'nav-link' }}">
@@ -249,7 +271,11 @@
                                  </li>
                             @endcan
 
+<<<<<<< HEAD
                              @can('Administrador')
+=======
+                             @can('administrador')
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
                                 <li class="nav-item">
                                     <a href="{{url('trabajos')}}"
                                        class="{{ Request::path() === 'trabajos' ? 'nav-link active' : 'nav-link' }}">
@@ -262,7 +288,11 @@
                             @endcan
 
 
+<<<<<<< HEAD
                             @can('Administrador')
+=======
+                            @can('administrador')
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
                                 <li class="nav-item">
                                     <a href="{{url('solicituds')}}"
                                        class="{{ Request::path() === 'solicituds' ? 'nav-link active' : 'nav-link' }}">

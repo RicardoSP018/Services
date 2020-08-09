@@ -7,7 +7,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 
+<<<<<<< HEAD
 class User extends Authenticatable implements MustVerifyEmail
+=======
+class User extends Authenticatable
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
 {
 
 

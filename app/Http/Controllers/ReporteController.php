@@ -28,6 +28,10 @@ class ReporteController extends Controller
         $reporte->fecha = $request->fecha;
         $reporte->save();
         return response()->json($reporte, 200);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
     }
 
         public function show(Request $request)

@@ -22,7 +22,11 @@ class SolicitudController extends Controller
         $solicitud = new Solicitud($request->all());
 
         $solicitud->save();
+<<<<<<< HEAD
         return response()->json($solicitud);
+=======
+        return response()->json($solicitud)
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
     }
 
    
@@ -44,6 +48,11 @@ class SolicitudController extends Controller
     }
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
     public function update(Request $request, Solicitud $solicitud)
     {
         $solicitud = Solicitud::findOrFail($request->id);

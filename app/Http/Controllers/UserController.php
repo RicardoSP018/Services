@@ -15,7 +15,10 @@ class UserController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+<<<<<<< HEAD
         $this->middleware('verified');
+=======
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
     }
 
         public function index()
@@ -85,9 +88,12 @@ class UserController extends Controller
         } else {
             unset($usuario->password);
         }
+<<<<<<< HEAD
 
 
         
+=======
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
         $role = $usuario->roles;
         if (count($role) > 0) {
             $role_id = $role[0]->id;

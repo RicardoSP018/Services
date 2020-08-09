@@ -16,7 +16,11 @@
                 @endif
             </div>
         </div>
+<<<<<<< HEAD
                 <form enctype="multipart/form-data" action="{{route('usuarios.update', $user->id)}}" method="POST">
+=======
+                <form action="{{route('usuarios.update', $user->id)}}" method="POST">
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
                     @method('PATCH')
                     @csrf
                  <div class="row">
@@ -75,7 +79,11 @@
                         <div class="form-group col-md-6">
                             <label>Imagen</label>
                             <input type="file" name="imagen" class="form-control">
+<<<<<<< HEAD
                             @if($user->imagen != "")
+=======
+                            @if($user->imagen !="")
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
                                 <img src="{{asset('imagenes/'. $user->imagen)}}" alt="{{$user->imagen}}" height="50px" width="50px">
                             @endif
                         </div>

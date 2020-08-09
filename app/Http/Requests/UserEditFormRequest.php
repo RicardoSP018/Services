@@ -25,7 +25,10 @@ class UserEditFormRequest extends FormRequest
     {
         return [
             'name' => 'required|max:255',
+<<<<<<< HEAD
             'imagen' => 'image|mimes:jpeg,bpm,png',
+=======
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
             'password' => 'required|min:6|confirmed'
 
         ];

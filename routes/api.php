@@ -17,13 +17,20 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
 Route::resource('reportes', 'ReporteController');
 Route::resource('solicitudes', 'SolicitudController');
 Route::resource('asignaciones', 'AsignacionApiController');
 Route::resource('areas', 'AreaApiController');
 Route::resource('roles', 'RoleApiController');
 Route::resource('trabajos', 'TrabajosApiController');
+<<<<<<< HEAD
 Route::post('register', 'Auth\RegisterController@register');
+=======
+Route::post('registrar', 'Auth\RegisterController@register');
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
 Route::post('ingresar', 'Auth\LoginController@ingresar');
 Route::post('salir', 'Auth\LoginController@salir');

@@ -11,8 +11,11 @@ class RoleController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+<<<<<<< HEAD
                 $this->middleware('verified');
 
+=======
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
     }
 
    

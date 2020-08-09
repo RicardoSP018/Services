@@ -8,12 +8,15 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+<<<<<<< HEAD
 use App\User;
 use App\Role;
 use App\Reporte;
 use App\Trabajos;
 use App\Solicitud;
 
+=======
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
 
 class LoginController extends Controller
 {
@@ -83,5 +86,8 @@ class LoginController extends Controller
     {
         return response()->json(['error' => 'Unauthenticated'], 401);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
 }

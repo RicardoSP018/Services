@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Reporte;
 use App\User;
+<<<<<<< HEAD
 use App\Role;
+=======
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
 use App\Trabajos;
 use App\Solicitud;
 use Illuminate\Http\Request;
@@ -16,8 +19,11 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+<<<<<<< HEAD
                 $this->middleware('verified');
 
+=======
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
     }
 
 
@@ -29,6 +35,7 @@ class HomeController extends Controller
 
         return view('home', ['reporte' => $reporte, 'trabajos' => $trabajos, 'solicitudes' => $solicitudes]);
     }
+<<<<<<< HEAD
 
     public function updateUser(UserEditFormRequest $request, $id)
     {
@@ -67,4 +74,6 @@ class HomeController extends Controller
         $usuario->update();
         return redirect('/usuarios');
         }
+=======
+>>>>>>> 4d6bcb37afdb70ff1d2016991077f42d5eeeb318
 }
